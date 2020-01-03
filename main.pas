@@ -15,7 +15,7 @@ type
   TfrmEditor = class(TForm)
     bbtnSave: TBitBtn;
     bbtnExit: TBitBtn;
-    btnOpenWorkingDir: TButton;
+    btnOpenWorkingDir: TBitBtn;
     cdDCElement: TComboBox;
     cbDCQualifier: TComboBox;
     cbDCContent: TComboBox;
@@ -23,6 +23,7 @@ type
     eDCContent: TEdit;
     gbWorkingDir: TGroupBox;
     gbDublinCore: TGroupBox;
+    ilIcons: TImageList;
     lDCElement: TLabel;
     lDCQualifier: TLabel;
     lDCContent: TLabel;
@@ -90,6 +91,11 @@ end;
 
 procedure TfrmEditor.FormCreate(Sender: TObject);
 begin
+  ilIcons.GetBitmap(0,sbtnAddDCElement.Glyph);
+  ilIcons.GetBitmap(1,bbtnExit.Glyph);
+  ilIcons.GetBitmap(2,bbtnSave.Glyph);
+  ilIcons.GetBitmap(3,btnOpenWorkingDir.Glyph);
+
   fFileTypes:=TStringList.Create;
   fDocTypes:=TStringList.Create;
 
