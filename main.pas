@@ -16,7 +16,7 @@ type
     bbtnSave: TBitBtn;
     bbtnExit: TBitBtn;
     btnOpenWorkingDir: TBitBtn;
-    cdDCElement: TComboBox;
+    cbDCElement: TComboBox;
     cbDCQualifier: TComboBox;
     cbDCContent: TComboBox;
     eWorkingDir: TEdit;
@@ -35,7 +35,7 @@ type
     procedure bbtnExitClick(Sender: TObject);
     procedure bbtnSaveClick(Sender: TObject);
     procedure btnOpenWorkingDirClick(Sender: TObject);
-    procedure cdDCElementSelect(Sender: TObject);
+    procedure cbDCElementSelect(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure sbtnAddDCElementClick(Sender: TObject);
   private
@@ -79,12 +79,12 @@ begin
      eWorkingDir.Text:=sddOpenWorkingDir.FileName;
 end;
 
-procedure TfrmEditor.cdDCElementSelect(Sender: TObject);
+procedure TfrmEditor.cbDCElementSelect(Sender: TObject);
 begin
-  ReadDCElements(cdDCElement.Text);
+  ReadDCElements(cbDCElement.Text);
 
-  if (cdDCElement.Text='format') or (cdDCElement.Text='type') then
-     ShowCbDCContent(cdDCElement.Text)
+  if (cbDCElement.Text='format') or (cbDCElement.Text='type') then
+     ShowCbDCContent(cbDCElement.Text)
   else if not eDCContent.Visible then ShowEDCContent();
 
 end;
@@ -119,7 +119,7 @@ begin
   memoline:='';
   if CheckValue(message) then
   begin
-       memoline:='<dcvalue element="'+cdDCElement.Text+'" qualifier="'+cbDCQualifier.Text+'">';
+       memoline:='<dcvalue element="'+cbDCElement.Text+'" qualifier="'+cbDCQualifier.Text+'">';
        if eDCContent.Visible then
           memoline:=memoline+eDCContent.Text
        else
@@ -132,11 +132,11 @@ end;
 procedure TfrmEditor.ReadDCElements();
 begin
   try
-    cdDCElement.Items.Clear;
+    cbDCElement.Items.Clear;
     fDCElement:=fDCXML.DocumentElement.FirstChild;
     while Assigned(fDCElement) do
     begin
-      cdDCElement.Items.Add(fDCElement.NodeName);
+      cbDCElement.Items.Add(fDCElement.NodeName);
       fDCElement:=fDCElement.NextSibling;
     end;
   finally
@@ -233,7 +233,7 @@ begin
   aMessage:='';
   Result:=True;
 
-  if cdDCElement.Text='' then
+  if cbDCElement.Text='' then
   begin
     Result:=False;
     aMessage:=aMessage+'Kérem válassza ki az Elemet!'+LineEnding;

@@ -8,6 +8,7 @@ object frmEditor: TfrmEditor
   ClientWidth = 1027
   OnCreate = FormCreate
   Position = poDesktopCenter
+  LCLVersion = '2.0.6.0'
   object gbWorkingDir: TGroupBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -143,7 +144,7 @@ object frmEditor: TfrmEditor
         ParentColor = False
       end
       object lDCQualifier: TLabel
-        AnchorSideLeft.Control = cdDCElement
+        AnchorSideLeft.Control = cbDCElement
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = pAddDCElements
         Left = 206
@@ -169,10 +170,10 @@ object frmEditor: TfrmEditor
         ParentColor = False
       end
       object sbtnAddDCElement: TSpeedButton
-        AnchorSideTop.Control = cdDCElement
+        AnchorSideTop.Control = cbDCElement
         AnchorSideRight.Control = pAddDCElements
         AnchorSideRight.Side = asrBottom
-        AnchorSideBottom.Control = cdDCElement
+        AnchorSideBottom.Control = cbDCElement
         AnchorSideBottom.Side = asrBottom
         Left = 831
         Height = 31
@@ -236,7 +237,7 @@ object frmEditor: TfrmEditor
         }
         OnClick = sbtnAddDCElementClick
       end
-      object cdDCElement: TComboBox
+      object cbDCElement: TComboBox
         Tag = 1
         AnchorSideLeft.Control = pAddDCElements
         AnchorSideTop.Control = lDCElement
@@ -248,15 +249,15 @@ object frmEditor: TfrmEditor
         BorderSpacing.Left = 5
         BorderSpacing.Top = 2
         ItemHeight = 0
-        OnSelect = cdDCElementSelect
+        OnSelect = cbDCElementSelect
         Style = csDropDownList
         TabOrder = 0
       end
       object cbDCQualifier: TComboBox
-        AnchorSideLeft.Control = cdDCElement
+        AnchorSideLeft.Control = cbDCElement
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = cdDCElement
-        AnchorSideBottom.Control = cdDCElement
+        AnchorSideTop.Control = cbDCElement
+        AnchorSideBottom.Control = cbDCElement
         AnchorSideBottom.Side = asrBottom
         Left = 206
         Height = 31
@@ -285,9 +286,9 @@ object frmEditor: TfrmEditor
       object cbDCContent: TComboBox
         AnchorSideLeft.Control = cbDCQualifier
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = cdDCElement
+        AnchorSideTop.Control = cbDCElement
         AnchorSideRight.Control = sbtnAddDCElement
-        AnchorSideBottom.Control = cdDCElement
+        AnchorSideBottom.Control = cbDCElement
         AnchorSideBottom.Side = asrBottom
         Left = 406
         Height = 31
@@ -298,6 +299,7 @@ object frmEditor: TfrmEditor
         BorderSpacing.Right = 10
         Enabled = False
         ItemHeight = 0
+        Style = csDropDownList
         TabOrder = 3
         Visible = False
       end
