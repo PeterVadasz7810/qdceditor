@@ -8,7 +8,6 @@ object frmEditor: TfrmEditor
   ClientWidth = 1027
   OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '2.0.6.0'
   object gbWorkingDir: TGroupBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -266,6 +265,7 @@ object frmEditor: TfrmEditor
         Anchors = [akTop, akLeft, akBottom]
         BorderSpacing.Left = 15
         ItemHeight = 0
+        OnChange = cbDCQualifierChange
         Style = csDropDownList
         TabOrder = 1
       end
@@ -327,12 +327,12 @@ object frmEditor: TfrmEditor
     end
   end
   object sddOpenWorkingDir: TSelectDirectoryDialog
-    left = 536
-    top = 448
+    left = 960
+    top = 352
   end
   object ilIcons: TImageList
-    left = 648
-    top = 440
+    left = 960
+    top = 408
     Bitmap = {
       4C69040000001000000010000000000000000000000000000000000000000000
       000046464628708478C23C6D50FF3C6D50FF708478C246464628000000000000

@@ -36,6 +36,7 @@ type
     procedure bbtnSaveClick(Sender: TObject);
     procedure btnOpenWorkingDirClick(Sender: TObject);
     procedure cbDCElementSelect(Sender: TObject);
+    procedure cbDCQualifierChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure sbtnAddDCElementClick(Sender: TObject);
   private
@@ -83,10 +84,17 @@ procedure TfrmEditor.cbDCElementSelect(Sender: TObject);
 begin
   ReadDCElements(cbDCElement.Text);
 
-  if (cbDCElement.Text='format') or (cbDCElement.Text='type') then
+  if (cbDCElement.Text='type') then
      ShowCbDCContent(cbDCElement.Text)
   else if not eDCContent.Visible then ShowEDCContent();
 
+end;
+
+procedure TfrmEditor.cbDCQualifierChange(Sender: TObject);
+begin
+  if (cbDCElement.Text='format') and (cbDCQualifier.Text='none') then
+     ShowCbDCContent(cbDCElement.Text)
+  else if not eDCContent.Visible then ShowEDCContent();
 end;
 
 procedure TfrmEditor.FormCreate(Sender: TObject);
