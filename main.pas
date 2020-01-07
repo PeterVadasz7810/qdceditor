@@ -83,16 +83,11 @@ end;
 procedure TfrmEditor.cbDCElementSelect(Sender: TObject);
 begin
   ReadDCElements(cbDCElement.Text);
-
-  if (cbDCElement.Text='type') then
-     ShowCbDCContent(cbDCElement.Text)
-  else if not eDCContent.Visible then ShowEDCContent();
-
 end;
 
 procedure TfrmEditor.cbDCQualifierChange(Sender: TObject);
 begin
-  if (cbDCElement.Text='format') and (cbDCQualifier.Text='none') then
+  if ((cbDCElement.Text='format') or (cbDCElement.Text='type')) and (cbDCQualifier.Text='none') then
      ShowCbDCContent(cbDCElement.Text)
   else if not eDCContent.Visible then ShowEDCContent();
 end;

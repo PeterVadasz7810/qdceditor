@@ -8,6 +8,7 @@ object frmEditor: TfrmEditor
   ClientWidth = 1027
   OnCreate = FormCreate
   Position = poDesktopCenter
+  LCLVersion = '2.0.4.0'
   object gbWorkingDir: TGroupBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -19,7 +20,7 @@ object frmEditor: TfrmEditor
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 5
     Caption = 'Munkamappa'
-    ClientHeight = 41
+    ClientHeight = 40
     ClientWidth = 878
     TabOrder = 0
     object eWorkingDir: TEdit
@@ -28,7 +29,7 @@ object frmEditor: TfrmEditor
       AnchorSideBottom.Control = gbWorkingDir
       AnchorSideBottom.Side = asrBottom
       Left = 5
-      Height = 26
+      Height = 25
       Top = 5
       Width = 775
       Anchors = [akTop, akLeft, akRight, akBottom]
@@ -46,7 +47,7 @@ object frmEditor: TfrmEditor
       AnchorSideBottom.Control = gbWorkingDir
       AnchorSideBottom.Side = asrBottom
       Left = 785
-      Height = 26
+      Height = 25
       Top = 5
       Width = 88
       Anchors = [akTop, akRight, akBottom]
@@ -114,7 +115,7 @@ object frmEditor: TfrmEditor
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Around = 5
     Caption = 'Dublin Core'
-    ClientHeight = 434
+    ClientHeight = 433
     ClientWidth = 878
     TabOrder = 2
     object pAddDCElements: TPanel
@@ -135,9 +136,9 @@ object frmEditor: TfrmEditor
         AnchorSideLeft.Control = pAddDCElements
         AnchorSideTop.Control = pAddDCElements
         Left = 6
-        Height = 17
+        Height = 15
         Top = 6
-        Width = 33
+        Width = 26
         BorderSpacing.Around = 5
         Caption = 'Elem'
         ParentColor = False
@@ -147,9 +148,9 @@ object frmEditor: TfrmEditor
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = pAddDCElements
         Left = 206
-        Height = 17
+        Height = 15
         Top = 6
-        Width = 60
+        Width = 47
         BorderSpacing.Left = 10
         BorderSpacing.Around = 5
         Caption = 'Minősítő'
@@ -160,9 +161,9 @@ object frmEditor: TfrmEditor
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = pAddDCElements
         Left = 406
-        Height = 17
+        Height = 15
         Top = 6
-        Width = 36
+        Width = 26
         BorderSpacing.Left = 10
         BorderSpacing.Around = 5
         Caption = 'Érték'
@@ -175,8 +176,8 @@ object frmEditor: TfrmEditor
         AnchorSideBottom.Control = cbDCElement
         AnchorSideBottom.Side = asrBottom
         Left = 831
-        Height = 31
-        Top = 28
+        Height = 23
+        Top = 26
         Width = 31
         Anchors = [akTop, akRight, akBottom]
         BorderSpacing.Right = 5
@@ -242,12 +243,12 @@ object frmEditor: TfrmEditor
         AnchorSideTop.Control = lDCElement
         AnchorSideTop.Side = asrBottom
         Left = 6
-        Height = 31
-        Top = 28
+        Height = 23
+        Top = 26
         Width = 185
         BorderSpacing.Left = 5
         BorderSpacing.Top = 2
-        ItemHeight = 0
+        ItemHeight = 15
         OnSelect = cbDCElementSelect
         Style = csDropDownList
         TabOrder = 0
@@ -259,12 +260,12 @@ object frmEditor: TfrmEditor
         AnchorSideBottom.Control = cbDCElement
         AnchorSideBottom.Side = asrBottom
         Left = 206
-        Height = 31
-        Top = 28
+        Height = 23
+        Top = 26
         Width = 185
         Anchors = [akTop, akLeft, akBottom]
         BorderSpacing.Left = 15
-        ItemHeight = 0
+        ItemHeight = 15
         OnChange = cbDCQualifierChange
         Style = csDropDownList
         TabOrder = 1
@@ -275,8 +276,8 @@ object frmEditor: TfrmEditor
         AnchorSideTop.Control = cbDCQualifier
         AnchorSideRight.Control = sbtnAddDCElement
         Left = 406
-        Height = 27
-        Top = 28
+        Height = 23
+        Top = 26
         Width = 415
         Anchors = [akTop, akLeft, akRight]
         BorderSpacing.Left = 15
@@ -291,14 +292,14 @@ object frmEditor: TfrmEditor
         AnchorSideBottom.Control = cbDCElement
         AnchorSideBottom.Side = asrBottom
         Left = 406
-        Height = 31
-        Top = 28
+        Height = 23
+        Top = 26
         Width = 415
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Left = 15
         BorderSpacing.Right = 10
         Enabled = False
-        ItemHeight = 0
+        ItemHeight = 15
         Style = csDropDownList
         TabOrder = 3
         Visible = False
@@ -312,7 +313,7 @@ object frmEditor: TfrmEditor
       AnchorSideBottom.Control = gbDublinCore
       AnchorSideBottom.Side = asrBottom
       Left = 5
-      Height = 349
+      Height = 348
       Top = 80
       Width = 868
       Align = alClient

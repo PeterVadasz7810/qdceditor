@@ -9,3 +9,11 @@
 /lib/x86_64-linux/main.lfm
 /lib/x86_64-linux/main.o
 /lib/x86_64-linux/main.ppu
+/dceditor.dbg
+/lib/x86_64-win64/dceditor.compiled
+/lib/x86_64-win64/dceditor.o
+/lib/x86_64-win64/dceditor.obj
+/lib/x86_64-win64/dceditor.res
+/lib/x86_64-win64/main.lfm
+/lib/x86_64-win64/main.o
+/lib/x86_64-win64/main.ppu
