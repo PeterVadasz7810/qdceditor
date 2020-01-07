@@ -90,6 +90,12 @@ begin
   if ((cbDCElement.Text='format') or (cbDCElement.Text='type')) and (cbDCQualifier.Text='none') then
      ShowCbDCContent(cbDCElement.Text)
   else if not eDCContent.Visible then ShowEDCContent();
+
+  if (cbDCElement.Text='identifier')  and (cbDCQualifier.Text='collection') then
+     eDCContent.Text:='Balassi Bálint Megyei Könyvtár';
+
+  if (cbDCElement.Text='description')  and (cbDCQualifier.Text='sponsorship') then
+     eDCContent.Text:='Digitalizálva és betöltve a KDS-K projekt keretében';
 end;
 
 procedure TfrmEditor.FormCreate(Sender: TObject);

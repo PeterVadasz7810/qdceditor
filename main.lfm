@@ -8,7 +8,7 @@ object frmEditor: TfrmEditor
   ClientWidth = 1027
   OnCreate = FormCreate
   Position = poDesktopCenter
-  LCLVersion = '2.0.4.0'
+  LCLVersion = '2.0.6.0'
   object gbWorkingDir: TGroupBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
@@ -20,7 +20,7 @@ object frmEditor: TfrmEditor
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 5
     Caption = 'Munkamappa'
-    ClientHeight = 40
+    ClientHeight = 41
     ClientWidth = 878
     TabOrder = 0
     object eWorkingDir: TEdit
@@ -115,7 +115,7 @@ object frmEditor: TfrmEditor
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Around = 5
     Caption = 'Dublin Core'
-    ClientHeight = 433
+    ClientHeight = 434
     ClientWidth = 878
     TabOrder = 2
     object pAddDCElements: TPanel
