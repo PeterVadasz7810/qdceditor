@@ -20,7 +20,7 @@ object frmEditor: TfrmEditor
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 5
     Caption = 'Munkamappa'
-    ClientHeight = 41
+    ClientHeight = 40
     ClientWidth = 878
     TabOrder = 0
     object eWorkingDir: TEdit
@@ -115,7 +115,7 @@ object frmEditor: TfrmEditor
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Around = 5
     Caption = 'Dublin Core'
-    ClientHeight = 434
+    ClientHeight = 433
     ClientWidth = 878
     TabOrder = 2
     object pAddDCElements: TPanel

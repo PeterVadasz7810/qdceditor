@@ -8,11 +8,9 @@
       <Unit0>
         <Filename Value="dceditor.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
+        <CursorPos Y="21"/>
         <UsageCount Value="29"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="main.pas"/>
@@ -21,8 +19,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="88"/>
-        <CursorPos Y="97"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="21"/>
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -51,7 +49,7 @@
         <UsageCount Value="10"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="27" HistoryIndex="26">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="main.pas"/>
         <Caret Line="41" Column="61" TopLine="30"/>
@@ -160,6 +158,10 @@
         <Filename Value="main.pas"/>
         <Caret Line="147" Column="48" TopLine="138"/>
       </Position27>
+      <Position28>
+        <Filename Value="dceditor.lpr"/>
+        <Caret Line="36" Column="4" TopLine="19"/>
+      </Position28>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
