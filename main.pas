@@ -42,7 +42,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Buttons, DOM, XMLRead;
+  Buttons, SynEdit, SynHighlighterXML, DOM, XMLRead;
 
 type
 
@@ -51,6 +51,7 @@ type
   TfrmEditor = class(TForm)
     bbtnSave: TBitBtn;
     bbtnExit: TBitBtn;
+    Bevel1: TBevel;
     btnOpenWorkingDir: TBitBtn;
     cbDCElement: TComboBox;
     cbDCQualifier: TComboBox;
@@ -60,29 +61,35 @@ type
     gbWorkingDir: TGroupBox;
     gbDublinCore: TGroupBox;
     ilIcons: TImageList;
+    Label1: TLabel;
+    Label2: TLabel;
     lDCElement: TLabel;
     lDCQualifier: TLabel;
     lDCContent: TLabel;
-    mDCXML: TMemo;
+    mDCXML: TSynEdit;
     pMenu: TPanel;
     pAddDCElements: TPanel;
     sddOpenWorkingDir: TSelectDirectoryDialog;
     sbtnAddDCElement: TSpeedButton;
+    SynXMLSyn1: TSynXMLSyn;
     procedure bbtnExitClick(Sender: TObject);
     procedure bbtnSaveClick(Sender: TObject);
     procedure btnOpenWorkingDirClick(Sender: TObject);
     procedure cbDCElementSelect(Sender: TObject);
     procedure cbDCQualifierChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure Label1Click(Sender: TObject);
     procedure sbtnAddDCElementClick(Sender: TObject);
   private
     fDCXML: TXMLDocument;
     fDCElement: TDOMNode;
     fFileTypes: TStringList;
     fDocTypes: TStringList;
+    fXMLCore: TStringList;
 
     procedure ReadDCElements(); overload;
     procedure ReadDCElements(ANodeName: DOMString); overload;
+    procedure GetDCValue(ANodeName: DOMString; AAttrName: String);
     procedure HideEDCContent();
     procedure ShowEDCContent();
     procedure HideCbDCContent();
@@ -104,7 +111,7 @@ const
      cFileTypes='filetypes';
      cDocTypes='doctypes';
      cDCXMLOutFile='dublin_core.xml';
-     cDCXMLCore='<?xml version="1.0" encoding="utf-8" standalone="no"?>'+LineEnding+'<dublin_core schema="dc">'+LineEnding+'</dublin_core>';
+     cDCXMLCore='xmlcore';
 
 {$R *.lfm}
 
@@ -127,12 +134,9 @@ begin
      ShowCbDCContent(cbDCElement.Text)
   else if not eDCContent.Visible then ShowEDCContent();
 
-  if (cbDCElement.Text='identifier')  and (cbDCQualifier.Text='collection') then
-     eDCContent.Text:='Balassi Bálint Megyei Könyvtár';
-
-  if (cbDCElement.Text='description')  and (cbDCQualifier.Text='sponsorship') then
-     eDCContent.Text:='Digitalizálva és betöltve a KDS-K projekt keretében';
+  GetDCValue(cbDCElement.Text,cbDCQualifier.Text);
 end;
+
 
 procedure TfrmEditor.FormCreate(Sender: TObject);
 begin
@@ -143,13 +147,21 @@ begin
 
   fFileTypes:=TStringList.Create;
   fDocTypes:=TStringList.Create;
+  fXMLCore:=TStringList.Create;
+
 
   fFileTypes.LoadFromFile(cFileTypes);
   fDocTypes.LoadFromFile(cDocTypes);
+  fXMLCore.LoadFromFile(cDCXMLCore);
 
   ReadXMLFile(fDCXML, cDCXMLFile);
 
   ReadDCElements();
+end;
+
+procedure TfrmEditor.Label1Click(Sender: TObject);
+begin
+  ShowMessage('Köszönöm, hogy ezt a programot választotta!');
 end;
 
 procedure TfrmEditor.sbtnAddDCElementClick(Sender: TObject);
@@ -198,10 +210,32 @@ begin
   with fDCElement.ChildNodes do
   try
      for i:=0 to (Count-1) do
-         cbDCQualifier.Items.Add(Item[i].FirstChild.NodeValue);
+     begin
+         cbDCQualifier.Items.Add(Item[i].Attributes.Item[0].NodeValue);
+
+     end;
   finally
      Free;
      cbDCQualifier.Text:='';
+  end;
+end;
+
+procedure TfrmEditor.GetDCValue(ANodeName: DOMString; AAttrName: String);
+var
+  i: integer;
+begin
+  fDCElement:=fDCXML.DocumentElement.FindNode(ANodeName);
+  with fDCElement.ChildNodes do
+  try
+     for i:=0 to (Count-1) do
+     begin
+         if Item[i].Attributes.Item[0].NodeValue=AAttrName then
+            if Assigned(Item[i].FirstChild) then
+                     eDCContent.Text:=Item[i].FirstChild.NodeValue
+            else eDCContent.Text:='';
+     end;
+  finally
+     Free;
   end;
 end;
 
@@ -253,7 +287,7 @@ end;
 procedure TfrmEditor.ClearAllFields();
 var i: integer;
 begin
-  ShowMessage('Mezők ürítése...');
+  //ShowMessage('Mezők ürítése...');
   (*
     Kiürítjük a mezőket
   *)
@@ -265,10 +299,10 @@ begin
           if ((Components[i] as TComboBox).Tag=1) then
              (Components[i] as TComboBox).Text:=''
           else (Components[i] as TComboBox).Items.Clear;
-       if (Components[i] is TMemo) then
+       if (Components[i] is TSynEdit) then
        begin
-          (Components[i] as TMemo).Lines.Text:='';
-          (Components[i] as TMemo).Lines.Add(cDCXMLCore);
+          (Components[i] as TSynEdit).Lines.Text:='';
+          (Components[i] as TSynEdit).Lines.Text:=fXMLCore.Text;
        end;
   end;
 end;
@@ -333,6 +367,10 @@ begin
 
   fFileTypes.Clear;
   FreeAndNil(fFileTypes);
+
+  fXMLCore.Clear;
+  FreeAndNil(fXMLCore);
+
   Close;
 end;
 

@@ -1,66 +1,75 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <dc_elements>
 	<title>
-		<qualifier>none</qualifier>
+		<qualifier name="none"></qualifier>
+                <qualifier name="alternative"></qualifier>
 	</title>
 	<identifier>
-		<qualifier>none</qualifier>
-		<qualifier>uri</qualifier>
-		<qualifier>collection</qualifier>
-		<qualifier>isbn</qualifier>
-		<qualifier>issn</qualifier>		
-		<qualifier>doi</qualifier>
-		<qualifier>location</qualifier>
+		<qualifier name="none"></qualifier>
+		<qualifier name="uri"></qualifier>
+		<qualifier name="collection">Balassi Bálint Megyei Könyvtár, Salgótarján</qualifier>
+		<qualifier name="isbn"></qualifier>
+		<qualifier name="issn"></qualifier>
+		<qualifier name="doi"></qualifier>
+		<qualifier name="location"></qualifier>
+                <qualifier name="citation"></qualifier>
 	</identifier>
 	<format>
-		<qualifier>none</qualifier>
-		<qualifier>extent</qualifier>
-		<qualifier>scale</qualifier>
+		<qualifier name="none"></qualifier>
+		<qualifier name="extent"></qualifier>
+		<qualifier name="scale"></qualifier>
+                <qualifier name="medium"></qualifier>
 	</format>
 	<type>
-		<qualifier>none</qualifier>
+		<qualifier name="none"></qualifier>
 	</type>
 	<date>
-		<qualifier>issued</qualifier>
-		<qualifier>copyright</qualifier>
+		<qualifier name="issued"></qualifier>
+		<qualifier name="copyright"></qualifier>
+                <qualifier name="created"></qualifier>
 	</date>
 	<rights>
-		<qualifier>none</qualifier>
+		<qualifier name="none"></qualifier>
+                <qualifier name="uri"></qualifier>
 	</rights>
 	<description>
-		<qualifier>none</qualifier>
-		<qualifier>sponsorship</qualifier>
-		<qualifier>tableofcontents</qualifier>
-		<qualifier>abstract</qualifier>
-		<qualifier>statementofresponsibility</qualifier>
+		<qualifier name="none"></qualifier>
+		<qualifier name="sponsorship">Digitalizálva és betöltve a KDS-K projekt keretében.</qualifier>
+		<qualifier name="tableofcontents"></qualifier>
+		<qualifier name="abstract"></qualifier>
+		<qualifier name="statementofresponsibility"></qualifier>
 	</description>
 	<contributor>
-		<qualifier>none</qualifier>
-		<qualifier>author</qualifier>
-		<qualifier>advisor</qualifier>
+		<qualifier name="none"></qualifier>
+		<qualifier name="author"></qualifier>
+		<qualifier name="advisor"></qualifier>
+                <qualifier name="editor"></qualifier>
 	</contributor>
 	<publisher>
-		<qualifier>none</qualifier>
-		<qualifier>place</qualifier>
+		<qualifier name="none"></qualifier>
+		<qualifier name="place"></qualifier>
 	</publisher>
 	<relation>
-		<qualifier>ispartof</qualifier>
-		<qualifier>uri</qualifier>
+                <qualifier name="none"></qualifier>
+                <qualifier name="ispartof"></qualifier>
+                <qualifier name="ispartofseries"></qualifier>
+		<qualifier name="uri"></qualifier>
 	</relation>
 	<subject>
-		<qualifier>none</qualifier>
-		<qualifier>name</qualifier>
+		<qualifier name="none"></qualifier>
+		<qualifier name="name"></qualifier>
 	</subject>
 	<coverage>
-		<qualifier>spatial</qualifier>
+		<qualifier name="spatial"></qualifier>
 	</coverage>
 	<language>
-		<qualifier>none</qualifier>		
+		<qualifier name="none"></qualifier>
+                <qualifier name="iso"></qualifier>
 	</language>
 	<creator>
-		<qualifier>none</qualifier>
+		<qualifier name="none"></qualifier>
 	</creator>
 	<source>
-		<qualifier>none</qualifier>
+		<qualifier name="none"></qualifier>
 	</source>
 </dc_elements>

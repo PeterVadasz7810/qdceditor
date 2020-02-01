@@ -4,12 +4,12 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Release"/>
-    <Units Count="5">
+    <Units Count="10">
       <Unit0>
         <Filename Value="dceditor.lpr"/>
         <IsPartOfProject Value="True"/>
         <CursorPos Y="21"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -20,8 +20,9 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos Y="21"/>
-        <UsageCount Value="29"/>
+        <TopLine Value="162"/>
+        <CursorPos X="59" Y="164"/>
+        <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -48,120 +49,168 @@
         <CursorPos X="3" Y="28"/>
         <UsageCount Value="10"/>
       </Unit4>
+      <Unit5>
+        <Filename Value="dcvalues.xml"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="4"/>
+        <CursorPos X="40" Y="24"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="XML"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\packages\fcl-xml\src\dom.pp"/>
+        <UnitName Value="DOM"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="211"/>
+        <CursorPos X="3" Y="200"/>
+        <UsageCount Value="11"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="doctypes"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="10" Y="2"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="filetypes"/>
+        <EditorIndex Value="4"/>
+        <CursorPos X="10" Y="2"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="xmlcore"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit9>
     </Units>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="main.pas"/>
-        <Caret Line="41" Column="61" TopLine="30"/>
+        <Caret Line="18" Column="32" TopLine="15"/>
       </Position1>
       <Position2>
         <Filename Value="main.pas"/>
-        <Caret Line="60" TopLine="46"/>
+        <Caret Line="103" Column="23" TopLine="86"/>
       </Position2>
       <Position3>
         <Filename Value="main.pas"/>
-        <Caret Line="114" Column="4" TopLine="84"/>
+        <Caret Line="97" Column="56" TopLine="86"/>
       </Position3>
       <Position4>
         <Filename Value="main.pas"/>
-        <Caret Line="86" Column="29" TopLine="54"/>
+        <Caret Line="147" Column="48" TopLine="138"/>
       </Position4>
       <Position5>
         <Filename Value="main.pas"/>
-        <Caret Line="68" Column="35" TopLine="54"/>
+        <Caret Line="85" Column="34" TopLine="76"/>
       </Position5>
       <Position6>
         <Filename Value="main.pas"/>
-        <Caret Line="98" Column="49" TopLine="86"/>
+        <Caret Line="147" Column="48" TopLine="138"/>
       </Position6>
       <Position7>
-        <Filename Value="main.pas"/>
-        <Caret Line="74" Column="11" TopLine="68"/>
+        <Filename Value="dceditor.lpr"/>
+        <Caret Line="36" Column="4" TopLine="19"/>
       </Position7>
       <Position8>
         <Filename Value="main.pas"/>
-        <Caret Line="71" Column="33" TopLine="53"/>
+        <Caret Line="86" Column="28" TopLine="66"/>
       </Position8>
       <Position9>
         <Filename Value="main.pas"/>
-        <Caret Line="89" Column="16" TopLine="58"/>
+        <Caret Line="232" Column="18" TopLine="196"/>
       </Position9>
       <Position10>
         <Filename Value="main.pas"/>
-        <Caret Line="47" Column="7" TopLine="31"/>
+        <Caret Line="230" Column="55" TopLine="205"/>
       </Position10>
       <Position11>
         <Filename Value="main.pas"/>
-        <Caret Line="79" Column="55" TopLine="79"/>
+        <Caret Line="234" TopLine="217"/>
       </Position11>
       <Position12>
         <Filename Value="main.pas"/>
-        <Caret Line="107" Column="21" TopLine="79"/>
+        <Caret Line="80" Column="5" TopLine="63"/>
       </Position12>
       <Position13>
         <Filename Value="main.pas"/>
-        <Caret Line="196" Column="62" TopLine="195"/>
+        <Caret Line="130" TopLine="113"/>
       </Position13>
       <Position14>
         <Filename Value="main.pas"/>
-        <Caret Line="53" Column="35" TopLine="50"/>
+        <Caret Line="89" Column="15" TopLine="89"/>
       </Position14>
       <Position15>
         <Filename Value="main.pas"/>
-        <Caret Line="52" Column="32" TopLine="39"/>
+        <Caret Line="90" Column="15" TopLine="90"/>
       </Position15>
       <Position16>
         <Filename Value="main.pas"/>
-        <Caret Line="202" Column="36" TopLine="199"/>
+        <Caret Line="363" Column="22" TopLine="333"/>
       </Position16>
       <Position17>
         <Filename Value="main.pas"/>
-        <Caret Line="249" Column="22" TopLine="242"/>
+        <Caret Line="281" Column="5" TopLine="271"/>
       </Position17>
       <Position18>
         <Filename Value="main.pas"/>
-        <Caret Line="97" Column="47" TopLine="82"/>
+        <Caret Line="288" Column="5" TopLine="278"/>
       </Position18>
       <Position19>
         <Filename Value="main.pas"/>
-        <Caret Line="95" Column="23" TopLine="86"/>
+        <Caret Line="78" Column="43" TopLine="139"/>
       </Position19>
       <Position20>
         <Filename Value="main.pas"/>
-        <Caret Line="18" Column="30" TopLine="15"/>
+        <Caret Line="224" Column="50" TopLine="215"/>
       </Position20>
       <Position21>
         <Filename Value="main.pas"/>
-        <Caret Line="17" Column="23" TopLine="15"/>
+        <Caret Line="125" Column="34" TopLine="116"/>
       </Position21>
       <Position22>
         <Filename Value="main.pas"/>
-        <Caret Line="18" Column="32" TopLine="15"/>
+        <Caret Line="134" Column="30" TopLine="125"/>
       </Position22>
       <Position23>
         <Filename Value="main.pas"/>
-        <Caret Line="103" Column="23" TopLine="86"/>
+        <Caret Line="188" Column="48" TopLine="179"/>
       </Position23>
       <Position24>
         <Filename Value="main.pas"/>
-        <Caret Line="97" Column="56" TopLine="86"/>
+        <Caret Line="206" Column="70" TopLine="198"/>
       </Position24>
       <Position25>
         <Filename Value="main.pas"/>
-        <Caret Line="147" Column="48" TopLine="138"/>
+        <Caret Line="224" Column="50" TopLine="217"/>
       </Position25>
       <Position26>
         <Filename Value="main.pas"/>
-        <Caret Line="85" Column="34" TopLine="76"/>
+        <Caret Line="227" Column="13" TopLine="299"/>
       </Position26>
       <Position27>
         <Filename Value="main.pas"/>
-        <Caret Line="147" Column="48" TopLine="138"/>
+        <Caret Line="125" Column="34" TopLine="119"/>
       </Position27>
       <Position28>
-        <Filename Value="dceditor.lpr"/>
-        <Caret Line="36" Column="4" TopLine="19"/>
+        <Filename Value="main.pas"/>
+        <Caret Line="194" Column="48" TopLine="185"/>
       </Position28>
+      <Position29>
+        <Filename Value="main.pas"/>
+        <Caret Line="162" Column="63" TopLine="160"/>
+      </Position29>
+      <Position30>
+        <Filename Value="main.pas"/>
+        <Caret Line="163" Column="63" TopLine="161"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
