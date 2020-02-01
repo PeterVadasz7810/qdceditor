@@ -18,3 +18,5 @@
 /lib/x86_64-win64/main.o
 /lib/x86_64-win64/main.ppu
 /backup/dceditor.lpr
+/dceditor
+/dceditor.exe
